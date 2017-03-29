@@ -1,0 +1,30 @@
+body {
+  background-image: url("cookie-jar-bg.jpg");
+  background-size: cover;
+  z-index: -1;
+}
+
+#navbar {
+  background-color: #f2bcee;
+  color: #788786;
+  font-size: 20px;
+  padding: 30px;
+  padding-bottom: 1px;
+  font-family: "Avant-Garde", sans-serif;
+  text-align: right;
+  margin-top: -20px;
+  width: 95%;
+}
+
+h1 {
+  font-family: "Indie Flower";
+  font-size: 60px;
+  text-align: center;
+  color: white;
+}
+
+button {
+  font-family: "Raleway";
+  font-size: 14px;
+  margin: 0 auto;
+}
