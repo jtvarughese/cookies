@@ -26,5 +26,10 @@ h1 {
 button {
   font-family: "Raleway";
   font-size: 14px;
-  margin: 0 auto;
+  margin: 80px;
+}
+
+img {
+  height: 300px;
+  width: 300px;
 }
