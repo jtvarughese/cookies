@@ -1,3 +1,5 @@
+Cookies.get()
+
 var sugar = document.querySelector("#sugarButton");
 var chocolate = document.querySelector("#chocolateButton");
 var lemon = document.querySelector("#lemonButton");
