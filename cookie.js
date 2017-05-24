@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+// document.addEventListener("DOMContentLoaded", function(){
   // Cookies.get()
 
   var sugar = document.querySelector("#sugarButton");
@@ -6,39 +6,37 @@ document.addEventListener("DOMContentLoaded", function(){
   var lemon = document.querySelector("#lemonButton");
   var clear = document.querySelector("#clearButton");
 
-  var sugarValue = 0;
-  var chocolateValue = 0;
-  var lemonValue = 0;
+
 
   // Cookies.set("sugar", sugarValue);
   // Cookies.set("chocolate", chocolateValue);
   // Cookies.set("lemon", lemonValue);
 
-  sugar.addEventListener("click", function(){
+  sugar.addEventListener("click", function(event){
     event.preventDefault();
       alert("You added a sugar cookie");
-      sugarValue += 1;
+      sugarValue ++
       Cookies.set("sugar", sugarValue);
       sugar.innerHTML = sugarValue;
   })
 
-  chocolate.addEventListener("click", function(){
+  chocolate.addEventListener("click", function(event){
     event.preventDefault()
       alert("You added a chocolate cookie")
-      chocolateValue += 1
+      chocolateValue ++
       Cookies.set("chocolate", chocolateValue)
       chocolate.innerHTML = chocolateValue
   })
 
-  lemon.addEventListener("click", function(){
+  lemon.addEventListener("click", function(event){
     event.preventDefault();
       alert("You added a lemon cookie");
-      lemonValue += 1;
+      lemonValue ++
       Cookies.set("lemon", lemonValue);
       lemon.innerHTML = lemonValue;
   })
 
-  clear.addEventListener("click", function(){
+  clear.addEventListener("click", function(event){
     event.preventDefault();
       // alert("Are you sure that you want to do that?");
       sugar.innerHTML = sugarValue = 0;
@@ -46,19 +44,23 @@ document.addEventListener("DOMContentLoaded", function(){
       lemon.innerHTML = lemonValue = 0;
   })
 
+  var sugarValue
+  var chocolateValue
+  var lemonValue
 
   function sugarSave (){
-    sugar.innerHTML = Cookies.get("sugar");
+    sugarValue = Cookies.get("sugar") || 0;
+    sugar.innerHTML = sugarValue
   };
   function chocolateSave (){
-    chocolate.innerHTML = Cookies.get("chocolate");
+    chocolateValue = Cookies.get("chocolate") || 0;
+    chocolate.innerHTML = Cookies.get("chocolate") || 0;
   };
   function lemonSave (){
-    lemon.innerHTML = Cookies.get("lemon");
+    lemonValue = Cookies.get("lemon") || 0;
+    lemon.innerHTML = Cookies.get("lemon") || 0;
   };
 
   window.onload = sugarSave();
   window.onload = chocolateSave();
   window.onload = lemonSave();
-
-})
